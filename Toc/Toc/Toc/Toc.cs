@@ -35,7 +35,7 @@ namespace TocGame
             IsMouseVisible = true;
 
             GestionDesEntrées = new InputManager(this);
-            Components.Add(GestionDesEntrées);
+            Components.Add(new GameManager(this));
 
             //TODO: 0.05?
             Components.Add(new PlancheDeJeu(this, "Board", 0.05f));
