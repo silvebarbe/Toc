@@ -22,8 +22,8 @@ namespace TocGame
         public Toc()
         {
             graphics = new GraphicsDeviceManager(this);
-            //graphics.PreferredBackBufferHeight = 1452;
-            //graphics.PreferredBackBufferWidth = 1385;
+            graphics.PreferredBackBufferHeight = 567;
+            graphics.PreferredBackBufferWidth = 567;
             Content.RootDirectory = "Content";
         }
 
@@ -39,9 +39,9 @@ namespace TocGame
 
             //TODO: 0.05?
             Components.Add(new PlancheDeJeu(this, "Board", 0.05f));
-            Components.Add(new Bille(this));
+            Components.Add(new Case(this, 45, 50));
             Components.Add(new AfficheurFPS(this, 1));
-            
+
             //TODO: Necessaire pour brasser
             PaquetDeCartes = new Paquet(this);
             Components.Add(PaquetDeCartes);
@@ -76,7 +76,7 @@ namespace TocGame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.White);
 
             SpriteBatch.Begin();
             base.Draw(gameTime);

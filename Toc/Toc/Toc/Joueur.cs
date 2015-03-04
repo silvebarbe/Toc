@@ -24,12 +24,10 @@ namespace TocGame
         {
             base.Initialize();
         }
+
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             base.Update(gameTime);
         }
-
-
-
     }
 }

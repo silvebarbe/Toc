@@ -51,7 +51,7 @@ namespace TocGame
 
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            Jeu.SpriteBatch.Draw(ImageJ1, millieu, null, Color.White, 0, Vector2.Zero, PlancheDeJeu.Echelle, SpriteEffects.None, 1);
+            Jeu.SpriteBatch.Draw(ImageJ1, millieu, null, Color.White, 0, Vector2.Zero, 0.5f, SpriteEffects.None, 1);
             base.Draw(gameTime);
         }
     }

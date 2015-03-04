@@ -29,7 +29,6 @@ namespace TocGame
       string ChaîneFPS { get; set; }
       Vector2 Dimension { get; set; }
       SpriteFont ArialFont { get; set; }
-      Vector2 PositionSouris { get; set; }
 
       public AfficheurFPS(Toc jeu, float intervalleMAJ)
          : base(jeu)
@@ -40,7 +39,6 @@ namespace TocGame
 
       public override void Initialize()
       {
-         PositionSouris = new Vector2();
          TempsÉcouléDepuisMAJ = 0;
          ValFPS = 0;
          CptFrames = 0;
@@ -83,16 +81,8 @@ namespace TocGame
 
       public override void Draw(GameTime gameTime)
       {
-          Jeu.SpriteBatch.DrawString(ArialFont, ChaîneFPS, PositionChaîne, Color.White, 0,
+          Jeu.SpriteBatch.DrawString(ArialFont, ChaîneFPS, PositionChaîne, Color.Red, 0,
                                       Vector2.Zero, 1.0f, SpriteEffects.None, 0);
-
-          //Affiche les coordonees d'un click dans l'ecran
-          if (Jeu.GestionDesEntrées.EstNouveauClicGauche())
-              PositionSouris = new Vector2(Jeu.GestionDesEntrées.GetPositionSouris().X, Jeu.GestionDesEntrées.GetPositionSouris().Y);
-
-          Jeu.SpriteBatch.DrawString(ArialFont, "(" + PositionSouris.X.ToString() + ", " + PositionSouris.Y.ToString() + ")", PositionSouris, Color.Red, 0,
-                  Vector2.Zero, 0.6f, SpriteEffects.None, 0);
-
           base.Draw(gameTime);
       }
    }

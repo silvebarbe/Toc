@@ -14,11 +14,11 @@ namespace TocGame
 {
     public class PlancheDeJeu : Microsoft.Xna.Framework.DrawableGameComponent
     {
-        public static Vector2 Echelle { get; set; }
-
+        public Vector2 Echelle { get; set; }
         public List<Case> listeCases { get; set; }
 
         const int NB_CASE = 104;
+
         Texture2D Image { get; set; }
         Toc Jeu { get; set; }
         float IntervalleMAJ { get; set; }
@@ -65,7 +65,6 @@ namespace TocGame
         public override void Draw(GameTime gameTime)
         {
             Jeu.SpriteBatch.Draw(Image, Vector2.Zero, null, Color.White, 0, Vector2.Zero, Echelle, SpriteEffects.None, 1);
-            //Jeu.SpriteBatch.Draw(Image, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1.0f, SpriteEffects.None, 1);
             base.Draw(gameTime);
         }
     }

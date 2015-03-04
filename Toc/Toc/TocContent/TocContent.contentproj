@@ -59,7 +59,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Textures\Board.png">
+    <Compile Include="Textures\Cases\Case_neutre.png">
+      <Name>Case_neutre</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Textures\Board.jpg">
       <Name>Board</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
