@@ -12,7 +12,6 @@ namespace TocGame
         enum Couleur { ROUGE, BLEU, VERT, JAUNE }
 
         Toc Jeu { get; set; }
-        Case position_{ get ; set; }
         Couleur couleur_{ get ; set; }
         Texture2D ImageJ1 { get; set; }
         Texture2D ImageJ2 { get; set; }

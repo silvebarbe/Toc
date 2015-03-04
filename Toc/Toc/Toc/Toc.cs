@@ -22,15 +22,15 @@ namespace TocGame
         public Toc()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferHeight = 567;
-            graphics.PreferredBackBufferWidth = 567;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 600;
             Content.RootDirectory = "Content";
         }
 
         protected override void Initialize()
         {
             Window.Title = "Toc";
-            Window.AllowUserResizing = true;
+            //Window.AllowUserResizing = true;
             Window.ClientSizeChanged += new EventHandler<EventArgs>(Window_ClientSizeChanged);
             IsMouseVisible = true;
 
@@ -39,8 +39,7 @@ namespace TocGame
 
             //TODO: 0.05?
             Components.Add(new PlancheDeJeu(this, "Board", 0.05f));
-            Components.Add(new Case(this, 45, 50));
-            Components.Add(new AfficheurFPS(this, 1));
+            //Components.Add(new AfficheurFPS(this, 1));
 
             //TODO: Necessaire pour brasser
             PaquetDeCartes = new Paquet(this);
